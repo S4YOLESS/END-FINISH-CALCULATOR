@@ -24,8 +24,8 @@ public class Main {
             throw new NumberFormatException("Неверный формат числа (Введите цельное число)");
         }
         try {
-            int a = Integer.parseInt(par1);
-            int b = Integer.parseInt(par2);
+            Integer.parseInt(par1);
+            Integer.parseInt(par2);
         } catch (NumberFormatException e) {
             throw new NumberFormatException("Неверный формат выражения(Введите только числа)");
         }
@@ -45,6 +45,7 @@ public class Main {
             System.out.println(a * b);
         } else if (st.contains("/")) {
             System.out.println(a / b);
-        }
+        } else
+            throw new NumberFormatException("Неверный формат выражения(Введите только +,-,*,/)");
     }
 }
